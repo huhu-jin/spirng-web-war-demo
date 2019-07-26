@@ -10,14 +10,4 @@
 
     <context:component-scan base-package="com.jin.learn"/>
     <aop:aspectj-autoproxy />
-
-    <bean id="apiValidatorFactoryProvider" lazy-init="true" class="com.cisco.webex.apis.supports.jersey.validator.ApiHibernateValidatorFactoryProvider" />
-
-    <bean class="com.sun.jersey.spi.container.ApiValidatorInjection" init-method="init" />
-
-    <bean lazy-init="true" class="com.cisco.webex.apis.supports.jersey.validator.ApiValidatorDocScanner">
-        <property name="componentName" value="msgv" />
-        <property name="apiValidatorFactoryProvider" ref="apiValidatorFactoryProvider" />
-    </bean>
-    <bean class="com.cisco.webex.apis.supports.jersey.ApiWorker4Jersey"/>
 </beans>

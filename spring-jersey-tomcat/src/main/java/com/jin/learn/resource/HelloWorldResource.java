@@ -1,5 +1,6 @@
 package com.jin.learn.resource;
 
+import com.cisco.webex.apis.core.annotation.ApiValidator;
 import com.jin.learn.request.RequestHello;
 import com.jin.learn.service.HelloService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,12 +24,12 @@ public class HelloWorldResource {
     }
 
     @POST
-    @Valid
     @Consumes(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    public RequestHello getMessage(RequestHello requestHello) {
-        requestHello.setName("zhangjin");
-        return requestHello;
+    public RequestHello getMessage() {
+        RequestHello requestHello1 = new RequestHello();
+        requestHello1.setName("zhangjin");
+        return requestHello1;
     }
 
     @POST()

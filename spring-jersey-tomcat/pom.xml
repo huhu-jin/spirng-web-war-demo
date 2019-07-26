@@ -124,7 +124,7 @@
             </exclusions>
         </dependency>
 
-        <!--不清楚？？？作用-->
+        <!--验证框架 注入-->
         <dependency>
             <groupId>com.cisco.webex.apis</groupId>
             <artifactId>framework-supports-jersey</artifactId>

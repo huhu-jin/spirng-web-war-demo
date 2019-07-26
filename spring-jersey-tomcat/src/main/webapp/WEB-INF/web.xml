@@ -16,11 +16,9 @@
         <servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
         <init-param>
             <param-name>com.sun.jersey.config.property.packages</param-name>
-
-
             <param-value>
                 com.jin.learn.resource, <!--处理request的handler-->
-                com.cisco.webex.apis.supports.jersey <!--处理request的validation-->
+                com.jin.learn.exception
             </param-value>
         </init-param>
         <!--开启request的序列化反序列化-->
