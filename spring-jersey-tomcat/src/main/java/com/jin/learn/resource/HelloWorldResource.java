@@ -26,10 +26,9 @@ public class HelloWorldResource {
     @POST
     @Consumes(MediaType.APPLICATION_JSON + ";charset=UTF-8")
     @Produces(MediaType.APPLICATION_JSON + ";charset=UTF-8")
-    public RequestHello getMessage() {
-        RequestHello requestHello1 = new RequestHello();
-        requestHello1.setName("zhangjin");
-        return requestHello1;
+    public RequestHello getMessage(@Valid RequestHello requestHello) {
+        requestHello.setName("zhangjin");
+        return requestHello;
     }
 
     @POST()
