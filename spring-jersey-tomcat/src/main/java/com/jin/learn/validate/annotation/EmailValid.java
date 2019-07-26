@@ -22,7 +22,7 @@ import static java.lang.annotation.RetentionPolicy.RUNTIME;
 @Documented()
 public @interface EmailValid {
 
-    String message() default "{ email error }";
+    String message() default "{ email e asdfasd rror }";
 
     Class<?>[] groups() default {};
 
